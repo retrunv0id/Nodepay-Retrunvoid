@@ -16,7 +16,7 @@ pip install -r requirements.txt
 
 #Add NP_TOKEN to the code
 1. Open `main.py` in a text editor
-2. Replace NP_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjEwMjIwNzY' with your NP_TOKEN
+2. Replace token_info = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjEwMjIwNzY' with your NP_TOKEN
 
 ## Usage
 ```bash
