@@ -191,7 +191,7 @@ async def main(proxy_file):
     await asyncio.gather(*tasks)
 
 if __name__ == '__main__':
-    token_info = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMjM1MzkzNzM3NTAxMTc5OTA0IiwiaWF0IjoxNzIwNDM2NDMyLCJleHAiOjE3MjE2NDYwMzJ9.RS9-vrYpbIHQJ0kthX1zaVRnRjfbwtz0rwRKM-DYmpLQr6eRzJkzSn79cClZ_MClcpyIQ5r58suo8BPewjcLrA"
+    token_info = "eyJhbGciOiJIUzUxMiJ9"
     proxy_file = "proxy.txt"
 
     try:
