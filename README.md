@@ -1,4 +1,4 @@
-# NodePlay - VPS
+# NodePay - VPS
 
 to run the code, you need to install the following packages:
 
