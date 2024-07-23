@@ -15,7 +15,7 @@ pip install -r requirements.txt
 4. Type `localStorage.getItem('np_token');` and press Enter
 
 #Add NP_TOKEN to the code
-1. Open `main.py` in a text editor
+1. Open `man.py` in a text editor
 2. Replace token_info = 'eyJhbGciOiJIUzxxxxxxxxxxxxxxxxxxxxxxxxxxx' with your NP_TOKEN
 
 ## Usage
