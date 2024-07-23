@@ -84,9 +84,11 @@ def call_api(url, data, proxy):
         logger.error(f"Error during API call to {url} using proxy {proxy}: {e}")
         raise ValueError(f"Failed API call to {url}")
 
-    return valid_resp(response.json())
-
-
+    try:
+        return valid_resp(response.json())
+    except ValueError as e:
+        logger.error(f"Invalid response from API call to {url} using proxy {proxy}: {e}")
+        return None
 
 async def start_ping(proxy):
     try:
@@ -110,7 +112,7 @@ async def ping(proxy):
         }
 
         response = call_api(DOMAIN_API["PING"], data, proxy)
-        if response["code"] == 0:
+        if response and response["code"] == 0:
             logger.info(f"Ping successful via proxy {proxy}: {response}")
             RETRIES = 0
             status_connect = CONNECTION_STATES["CONNECTED"]
@@ -191,7 +193,7 @@ async def main(proxy_file):
     await asyncio.gather(*tasks)
 
 if __name__ == '__main__':
-    token_info = "eyJhbGciOiJIUzUxMiJ9"
+    token_info = "eyJhbGciOiJIUzUxMiJ9xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
     proxy_file = "proxy.txt"
 
     try:
