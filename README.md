@@ -20,5 +20,5 @@ pip install -r requirements.txt
 
 ## Usage
 ```bash
-python3 main.py
+python3 man.py
 ```
